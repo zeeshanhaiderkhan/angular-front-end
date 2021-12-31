@@ -1,0 +1,29 @@
+<div class="container">
+    <form  method="POST" name="registerPatientForm" (ngSubmit)="updatePatient()">
+        <div class="form-group">
+            <label for="contact">Name</label>
+            <input type="text" [(ngModel)]='patient.patient_name' class="form-control" id="name" name="name" placeholder="Name">
+          </div>
+    
+          <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" [(ngModel)]='patient.patient_contact' class="form-control" id="contact" name="contact" placeholder="Phone">
+          </div>
+    
+          <div class="form-group">
+            <label for="emailadd">Email address</label>
+            <input type="email" [(ngModel)]='patient.patient_email' class="form-control" id="emailadd" name="emailadd" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+    
+          <div class="form-group">
+            <label for="cnic">CNIC</label>
+            <input type="cnic" [(ngModel)]='patient.patient_cnic' class="form-control" id="cnic"  name="cnic"  aria-describedby="emailHelp" placeholder="CNIC">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your CNIC with anyone else.</small>
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+    
+    

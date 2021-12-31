@@ -1,0 +1,31 @@
+<div class="container">
+<h4>Table of All Registered Patients</h4>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">CNIC</th>
+    <th scope="col">Contact</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let patient of patients; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td> 
+      {{ patient.patient_name }}
+    </td>
+    <td>{{ patient.patient_email }}</td>
+    <td>{{ patient.patient_cnic }}</td>
+    <td>{{ patient.patient_contact }}</td>
+    
+    <td ><a [routerLink]="['/deletepatient',patient._id]">Delete</a></td>
+    <td><a [routerLink]="['/updatepatient',patient._id]">Update</a></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>
